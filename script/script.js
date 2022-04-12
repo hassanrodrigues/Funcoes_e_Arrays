@@ -23,15 +23,15 @@ function positions(fisrtPlace, secondPlace, lastPlace) {
     console.log("Tarefas Extras")
     if (arrayAtletas[0].tarefaExtra == true) {
         console.log(`${arrayAtletas[0].nome} completou a tarefa extra e subiu uma posicao`)
-        mudarPosicaoAtleta(0, arrayAtletas, 0)
+        arrayAtletas=mudarPosicaoAtleta(0, arrayAtletas, 0)
     }
     if (arrayAtletas[1].tarefaExtra == true) {
         console.log(`${arrayAtletas[1].nome} completou a tarefa extra e subiu uma posicao`)
-        mudarPosicaoAtleta(1, arrayAtletas, 0)
+        arrayAtletas=mudarPosicaoAtleta(1, arrayAtletas, 0)
     }
     if (arrayAtletas[2].tarefaExtra == true) {
         console.log(`${arrayAtletas[2].nome} completou a tarefa extra e subiu uma posicao`)
-        mudarPosicaoAtleta(2, arrayAtletas, 1)
+        arrayAtletas = mudarPosicaoAtleta(2, arrayAtletas, 1)
 
     }
     //console.log(arrayAtletas)
