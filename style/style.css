@@ -36,11 +36,18 @@
   nav,
   section,
   summary,
-  time{
+  time {
       margin: 0;
       padding: 0;
       border: 0;
       font-size: 100%;
       font: inherit;
       vertical-align: baseline;
+  }
+
+  h1 {
+      display: flex;
+      justify-content: center;
+      font-size: 30px;
+      color: black;
   }
