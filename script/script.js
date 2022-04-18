@@ -1,53 +1,27 @@
 function positions(fisrtPlace, secondPlace, lastPlace) {
-    let arrayAtletas = [{
-            nome: fisrtPlace,
-            tarefaExtra: false
-        },
-        {
-            nome: secondPlace,
-            tarefaExtra: false
-        },
-        {
-            nome: lastPlace,
-            tarefaExtra: true
-        }
-    ]
-    //console.log(arrayAtletas)
-    console.log(
-        `---Chegada---
-    1ª - Colocado ${arrayAtletas[0].nome}
-    2ª - Colocado ${arrayAtletas[1].nome} 
-    3ª - Colocado ${arrayAtletas[2].nome}  
-        `
-    )
-    console.log("Tarefas Extras")
-    if (arrayAtletas[0].tarefaExtra == true) {
-        console.log(`${arrayAtletas[0].nome} completou a tarefa extra e subiu uma posicao`)
-        arrayAtletas=mudarPosicaoAtleta(0, arrayAtletas, 0)
+    let atletas = [fisrtPlace, secondPlace, lastPlace]
+  //segundo pra primeira
+    if (secondPlace===`Daniel`) {
+        atletas[0]=atletas[1]
+        atletas[1]=fisrtPlace
     }
-    if (arrayAtletas[1].tarefaExtra == true) {
-        console.log(`${arrayAtletas[1].nome} completou a tarefa extra e subiu uma posicao`)
-        arrayAtletas=mudarPosicaoAtleta(1, arrayAtletas, 0)
-    }
-    if (arrayAtletas[2].tarefaExtra == true) {
-        console.log(`${arrayAtletas[2].nome} completou a tarefa extra e subiu uma posicao`)
-        arrayAtletas = mudarPosicaoAtleta(2, arrayAtletas, 1)
 
-    }
+    if(lastPlace===`Daniel`) {
+        atletas[1]=atletas[2]
+        atletas[2]=secondPlace   
+    }  
     //console.log(arrayAtletas)
-
     return `
     Resultado final
-    1ª - Colocado ${arrayAtletas[0].nome}
-    2ª - Colocado ${arrayAtletas[1].nome} 
-    3ª - Colocado ${arrayAtletas[2].nome}  
-    `
+    1ª - Colocado ${atletas[0]}
+    2ª - Colocado ${atletas[1]} 
+    3ª - Colocado ${atletas[2]} `
 
 }
 
-function mudarPosicaoAtleta(posicaoChegada, arrayAtletas, posicaoFinalExtra) {
-    arrayAtletas.splice(posicaoFinalExtra, 0, arrayAtletas.splice(posicaoChegada, 1)[0]);
-    return arrayAtletas;
-}
-
+console.log(`Teste 1`)
 console.log(positions('Rafael', 'Manoel', 'Daniel'))
+console.log(`Teste 2`)
+console.log(positions('Rafael', 'Daniel', 'Manoel'))
+console.log(`Teste3`)
+console.log(positions('Daniel', 'Rafael', 'Manoel'))
